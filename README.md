@@ -81,21 +81,9 @@ SQLCREATE TABLE sensor_data (
 );
 ```
 
-## Demo
-
-Server demo: http://overview.my.id
-(Ganti dengan link kamu nanti)
-
-Pengembangan Lanjutan (Opsional)
-
-Tambah aplikasi Blynk / Telegram Bot untuk notifikasi
-Kontrol manual pompa dari HP
-Jadwal penyiraman harian
-Grafik real-time dengan Chart.js
-Prediksi kebutuhan air dengan Machine Learning
-
-Lisensi
+## Lisensi
 Proyek ini open-source dan bebas digunakan, dimodifikasi, serta dikomersialkan.
+
 
 
 

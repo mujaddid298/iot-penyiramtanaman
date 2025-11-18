@@ -1,4 +1,3 @@
-
 # IoT Penyiram Tanaman Otomatis Berbasis ESP8266
 
 Sistem penyiraman tanaman otomatis berbasis IoT menggunakan **NodeMCU ESP8266**, sensor DHT11, sensor kelembaban tanah, dan relay untuk mengontrol pompa air. Data sensor (suhu, kelembapan udara, kelembapan tanah, dan status pompa) dikirim setiap 20 detik ke server web untuk monitoring real-time.
@@ -80,6 +79,7 @@ SQLCREATE TABLE sensor_data (
     pump_status INT,
     timestamp DATETIME
 );
+```
 
 ## Demo
 
@@ -96,5 +96,6 @@ Prediksi kebutuhan air dengan Machine Learning
 
 Lisensi
 Proyek ini open-source dan bebas digunakan, dimodifikasi, serta dikomersialkan.
+
 
 

@@ -80,7 +80,8 @@ SQLCREATE TABLE sensor_data (
     pump_status INT,
     timestamp DATETIME
 );
-Demo
+
+#Demo
 
 Server demo: http://overview.my.id
 (Ganti dengan link kamu nanti)
@@ -95,3 +96,4 @@ Prediksi kebutuhan air dengan Machine Learning
 
 Lisensi
 Proyek ini open-source dan bebas digunakan, dimodifikasi, serta dikomersialkan.
+

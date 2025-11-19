@@ -30,59 +30,10 @@ Relay IN  → D1 (GPIO5)
 Relay VCC → VIN (5V)
 Relay GND → GND
 Pompa     → Terhubung ke relay (NO & COM)
-text## Konfigurasi Kode
-1. Ganti bagian berikut sesuai jaringan dan server kamu:
-```cpp
-const char* ssid = "MUJADID";          // ← Ganti dengan WiFi kamu
-const char* password = "adit2023";     // ← Ganti dengan password WiFi
-const char* server = "overview.my.id"; // ← Ganti dengan domain/IP server kamu
-
-Upload kode menggunakan Arduino IDE (pilih board NodeMCU 1.0 (ESP-12E Module))
-
-Backend Server (sensor_receiver.php)
-Buat file sensor_receiver.php di hosting kamu (contoh):
-PHP<?php
-$servername = "localhost";
-$username = "username_db";
-$password = "password_db";
-$dbname = "nama_database";
-
-// Ambil data dari ESP8266
-$temperature = $_GET['temperature'];
-$humidity = $_GET['humidity'];
-$moisture = $_GET['moisture'];
-$pump = $_GET['pump'];
-$timestamp = date("Y-m-d H:i:s");
-
-// Koneksi ke MySQL
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-$sql = "INSERT INTO sensor_data (temperature, humidity, moisture, pump_status, timestamp) 
-        VALUES ('$temperature', '$humidity', '$moisture', '$pump', '$timestamp')";
-
-if ($conn->query($sql) === TRUE) {
-    echo "Data berhasil disimpan";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
-$conn->close();
-?>
-Tabel Database (MySQL)
-SQLCREATE TABLE sensor_data (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    temperature FLOAT,
-    humidity FLOAT,
-    moisture FLOAT,
-    pump_status INT,
-    timestamp DATETIME
-);
-```
 
 ## Lisensi
 Proyek ini open-source dan bebas digunakan, dimodifikasi, serta dikomersialkan.
+
 
 
 
